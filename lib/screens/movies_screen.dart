@@ -63,20 +63,17 @@ class _MoviesScreenState extends State<MoviesScreen> {
                         TextField(
                           controller: _nameController,
                           autofocus: true,
-                          decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
-                              hintText: 'Movie Name'),
+                          decoration:
+                              const InputDecoration(hintText: 'Movie Name'),
                         ),
                         TextField(
                           controller: _thumbnailController,
                           decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
                               hintText: 'Movie Thumbnail'),
                         ),
                         TextField(
                           controller: _uploadByController,
                           decoration: const InputDecoration(
-                              border: OutlineInputBorder(),
                               hintText: 'Movie Uploader Name'),
                         )
                       ],

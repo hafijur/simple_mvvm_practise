@@ -1,13 +1,15 @@
 import 'package:flutter/widgets.dart';
 import 'package:simple_mvvm_practise/models/movie.dart';
 
+const String defaultImage =
+    "https://tamilrockerss.me.uk/wp-content/uploads/2021/10/b40ApfKDPoJYbWepUs7f09Y3fD-185x278.jpg";
+
 class MovieListViewModel extends ChangeNotifier {
   List<MovieViewModel> movies = [
     MovieViewModel(
         movie: Movie(
             name: "21 Bridges",
-            thumbnail:
-                "https://tamilrockerss.me.uk/wp-content/uploads/2021/10/b40ApfKDPoJYbWepUs7f09Y3fD-185x278.jpg",
+            thumbnail: defaultImage,
             uploadBy: "Md. Hafijur Rahman"))
   ];
 

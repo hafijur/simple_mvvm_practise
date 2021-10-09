@@ -12,7 +12,10 @@ class MovieCard extends StatelessWidget {
       height: 100,
       child: FittedBox(
         fit: BoxFit.contain,
-        child: Image.network(movie.thumbnail),
+        child: Image.network(
+          movie.thumbnail,
+          errorBuilder: (context, image, e) => Image.network(defaultImage),
+        ),
       ),
     );
   }
@@ -20,7 +23,7 @@ class MovieCard extends StatelessWidget {
   _movieMetas() {
     return Row(
       children: [
-        Text(movie.name),
+        Text("Name - " + movie.name),
         const SizedBox(width: 15),
         Text("Uploaded By - " + movie.uploadBy)
       ],
